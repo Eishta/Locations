@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
+import PropTypes from 'prop-types';
 
 export class Errors extends Component {
     render() {
@@ -16,4 +17,7 @@ export class Errors extends Component {
     }
 }
 
+Errors.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
 export default Errors

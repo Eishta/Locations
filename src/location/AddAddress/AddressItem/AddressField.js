@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 function AddressField(props) {
 
@@ -89,4 +90,12 @@ function AddressField(props) {
     )
 }
 
+AddressField.propTypes = {
+    xs: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired
+  };
+  
+  
 export default AddressField

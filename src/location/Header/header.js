@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
         boxShadow: 'none',
         backgroundColor: 'rgba(224, 224, 224, 0.31)'
     },
-
     title: {
         flexGrow: 1,
         boxShadow: 'none',
@@ -21,13 +20,11 @@ const useStyles = makeStyles(theme => ({
             display: "flex"
         }
     },
-
     inputRoot: {
         color: "inherit"
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create("width"),
         width: "100%",

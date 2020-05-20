@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import FacilityGrid from './facilityGrid'
 import TextField from '@material-ui/core/TextField';
+import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -127,3 +128,7 @@ export default function facilityTimes({setFacility, facility}) {
 
   );
 }
+facilityTimes.propTypes = {
+  facility: PropTypes.object.isRequired,
+  setFacility: PropTypes.func.isRequired
+};

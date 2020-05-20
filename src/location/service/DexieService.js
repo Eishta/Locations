@@ -2,7 +2,7 @@ import Dexie from 'dexie';
 
 
 const db = new Dexie('LocationsDB');
-db.version(1).stores({ locations: '++id' });
+db.version(1).stores({ locations: '++id, &location' });
 
 
 class DBService {

@@ -2,6 +2,7 @@ import React from 'react';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import TimePicker from 'react-bootstrap-time-picker';
+import PropTypes from 'prop-types';
 import './toggle.css'
 
 export default function Toggle({value, onChange}) {
@@ -33,3 +34,7 @@ export default function Toggle({value, onChange}) {
     </div>
   );
 }
+Toggle.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};

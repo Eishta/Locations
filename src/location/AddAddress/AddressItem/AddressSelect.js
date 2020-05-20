@@ -1,6 +1,8 @@
 import React from 'react'
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
+
 
 function AddressSelect(props) {
     const { xs, label, id, options, value , handleChange} = props;
@@ -30,4 +32,13 @@ function AddressSelect(props) {
     )
 }
 
+
+AddressSelect.propTypes = {
+    xs: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    handleChange: PropTypes.func.isRequired,
+    options: PropTypes.array.isRequired
+  };
+  
 export default AddressSelect

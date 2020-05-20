@@ -11,6 +11,9 @@ export default function location() {
     getList();
   }, [])
 
+  /**
+   * Function that does the get request on the table
+   */
   const getList =()=> {
     Service.getAll().then(locations => {
       let list = locations.map(loc => {
@@ -25,17 +28,24 @@ export default function location() {
     });
   }
 
+  /**
+   * Function to concatinate the fields entered in the "03. Add Location"
+   * @param {*} address 
+   */
   const concatAdd = (address) => {
     return Object.values(address).filter(Boolean).join(', ')
   }
 
+  /**
+   * Function called to delete a location
+   * @param {*} id 
+   */
   const deleteLoc = (id) => {
     Service.delete(id).then(() => {
       const newList = state.locations.filter((location) => location.id !== id);
       setState({ locations: newList });
     })
   }
-
 
   return (
     <React.Fragment>
